@@ -1,0 +1,13 @@
+{
+	"github.copilot.chat.reviewSelection.instructions": [
+		{
+			"file": "/docs/review-selection.md"
+		}
+	],
+
+	"github.copilot.chat.commitMessageGeneration.instructions": [
+		{
+			"text": "커밋 메시지는 한글로 작성하며, 현재 시제로 작성합니다. 커밋 메시지는 변경 내용을 자세히 요약해서, 항목마다 문장 앞에 '-'를 붙여서 작성해주세요. 이모지들을 포함합니다."
+		}
+	],
+}
