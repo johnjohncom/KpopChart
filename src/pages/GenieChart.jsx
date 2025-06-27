@@ -12,6 +12,14 @@ function GenieChart() {
     let is_mounted = true;
     set_loading(true);
     set_error(null);
+    
+    // API URL 검증
+    if (!API_BASE_URL) {
+      set_error('API 서버 설정이 올바르지 않습니다.');
+      set_loading(false);
+      return;
+    }
+    
     fetchWithState(API_BASE_URL + API_ENDPOINTS.GENIE_TOP200)
       .then((result) => {
         if (is_mounted) {
@@ -19,7 +27,14 @@ function GenieChart() {
           set_error(result.error);
           set_loading(result.loading);
         }
+      })
+      .catch((err) => {
+        if (is_mounted) {
+          set_error('데이터를 불러오는데 실패했습니다.');
+          set_loading(false);
+        }
       });
+      
     return () => {
       is_mounted = false;
     };
@@ -32,5 +47,7 @@ function GenieChart() {
     </div>
   );
 }
+
+export default GenieChart;
 
 export default GenieChart;
