@@ -50,4 +50,3 @@ function GenieChart() {
 
 export default GenieChart;
 
-export default GenieChart;
