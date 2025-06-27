@@ -50,4 +50,4 @@ function BugsChart() {
 
 export default BugsChart;
 
-export default BugsChart;
+
