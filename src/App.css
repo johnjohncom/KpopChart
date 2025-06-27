@@ -22,10 +22,95 @@ body {
   }
 }
 
+/* Header 반응형 및 네비게이션 개선 */
+header {
+  width: 100vw;
+  min-width: 0;
+}
+header nav a {
+  transition: color 0.2s;
+}
+header nav a:hover {
+  color: #ffd600;
+}
+
+@media (max-width: 600px) {
+  header div {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  header nav a {
+    margin-right: 10px !important;
+    font-size: 15px;
+  }
+}
+
+/* SongCard 반응형 및 접근성 개선 */
 .song-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 12px;
+  margin-bottom: 12px;
+  display: flex;
+  align-items: center;
+  background: #fff;
   transition: box-shadow 0.2s;
 }
 .song-card:hover {
   box-shadow: 0 2px 8px rgba(0,0,0,0.12);
   background: #f0f4ff;
+}
+.song-card img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  object-fit: cover;
+  background: #eee;
+}
+@media (max-width: 600px) {
+  .song-card {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 6px;
+  }
+  .song-card img {
+    width: 48px;
+    height: 48px;
+    margin-bottom: 6px;
+  }
+}
+
+/* ChartList, Home 페이지 스타일 */
+.chart-list {
+  margin-top: 12px;
+}
+
+.home-nav {
+  margin-top: 24px;
+}
+.home-nav ul {
+  list-style: none;
+  padding: 0;
+  display: flex;
+  gap: 18px;
+}
+.home-nav a {
+  color: #1976d2;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 18px;
+  transition: color 0.2s;
+}
+.home-nav a:hover {
+  color: #ffd600;
+}
+@media (max-width: 600px) {
+  .home-nav ul {
+    flex-direction: column;
+    gap: 8px;
+  }
+  .home-nav a {
+    font-size: 16px;
+  }
 }

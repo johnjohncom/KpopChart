@@ -2,11 +2,10 @@
 import React from "react";
 
 function SongCard({ rank, title, composer, artist, albumImage }) {
-
   return (
-    <div className="song-card" style={{ border: "1px solid #ddd", borderRadius: 8, padding: 12, marginBottom: 12, display: "flex", alignItems: "center", background: "#fff" }}>
+    <div className="song-card">
       <div style={{ marginRight: 16 }}>
-        <img src={albumImage} alt={title + " 앨범 커버"} style={{ width: 60, height: 60, borderRadius: 6, objectFit: "cover" }} />
+        <img src={albumImage} alt={title + " 앨범 커버"} />
       </div>
       <div>
         <div style={{ fontWeight: "bold", fontSize: 18 }}>{rank}. {title}</div>
