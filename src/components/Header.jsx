@@ -1,7 +1,8 @@
 import React from 'react';
+import { HEADER_CONTAINER_STYLE } from '../constants/headerStyles';
 
 const Header = () => (
-  <header style={{ padding: '1rem', background: '#222', color: '#fff' }}>
+  <header style={HEADER_CONTAINER_STYLE}>
     <h2>K-pop 음악 대장</h2>
   </header>
 );
