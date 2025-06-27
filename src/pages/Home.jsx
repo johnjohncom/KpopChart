@@ -3,7 +3,7 @@ import React from 'react';
 const Home = () => (
   <div>
     <h1>K-pop 음악 대장</h1>
-    <nav>
+    <nav className="home-nav">
       <ul>
         <li><a href="/melon">멜론 탑100</a></li>
         <li><a href="/bugs">벅스 탑100</a></li>
